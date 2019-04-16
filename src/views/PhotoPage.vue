@@ -88,54 +88,5 @@ export default {
 </script>
 
 <style scoped>
-.photoTitle {
-  margin: 0px;
-  font-size: 1.2em;
-}
 
-.comments{
-  border: 1px solid black;
-  margin: 10px;
-  padding: 10px;
-
-}
-.photoDate {
-  margin: 0px;
-  font-size: 0.9em;
-  font-weight: normal;
-}
-
-p {
-  margin: 0px;
-  text-align: center;
-}
-
-h1 {
-  text-align: center;
-}
-
-input {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-button {
-  margin: 10px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.image {
-  margin: 0 0 1.5em;
-  display: inline-block;
-  width: 100%;
-}
-
-.image img {
-  max-width: 600px;
-  max-height: 600px;
-  image-orientation: from-image;
-}
 </style>

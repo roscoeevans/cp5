@@ -1,4 +1,4 @@
-# creative_project5
+# lab-5-samuelpugh4
 
 ## Project setup
 ```
