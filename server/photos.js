@@ -20,7 +20,6 @@ const photoSchema = new mongoose.Schema({
     type: mongoose.Schema.ObjectId,
     ref: 'User'
   },
-  path: String,
   title: String,
   description: String,
   created: {
@@ -44,24 +43,17 @@ const Photo = mongoose.model('Photo', photoSchema);
 router.post("/", auth.verifyToken, User.verify, upload.single('photo'), async (req, res) => {
   console.log("IN POST!")
   // check parameters
-  if (!req.file)
-    return res.status(400).send({
-      message: "Must upload a file."
-    });
 
   const photo = new Photo({
     user: req.user,
-    path: "/images/" + req.file.filename,
+    //path: "/images/" + req.file.filename,
     title: req.body.title,
     description: req.body.description,
   });
   try {
-    console.log("About to await photo.save");
     await photo.save();
-    console.log("Success");
     return res.sendStatus(200);
   } catch (error) {
-    console.log("Not success")
     console.log(error);
     return res.sendStatus(500);
   }

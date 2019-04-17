@@ -4,15 +4,17 @@
     <div class="modal-wrapper">
       <div class="modal-container">
         <div class="modal-header">
-          <h1 class="modal-title">Upload</h1>
+        <div class = "blackText">
+          <h1 class="modal-title">Register your Restaurant</h1>
+        </div>
         </div>
         <div class="modal-body">
           <p v-if="error" class="error">{{error}}</p>
           <form @submit.prevent="upload">
             <div class = "blackText">
-              <input v-model="title" placeholder="Title">
+              <input v-model="title" placeholder="Name of Restaurant">
               <p></p>
-              <textarea v-model="description" placeholder="Description"></textarea>
+              <textarea v-model="description" placeholder="Description of Restaurant"></textarea>
               <p></p>
               <p></p>
               <button type="button" @click="close" class="pure-button">Close</button>

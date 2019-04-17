@@ -15,8 +15,8 @@
   <button type="button" @click="submitComment(photo.user.name,newComment)" class="pure-button">Comment</button>
   <div class = "comments" v-for="comment in comments">
     <p>{{comment.text}}</p>
-    <p>{{comment.username}} </p>
-    <p>{{formatDate(comment.created)}}</p>
+    <p>-{{comment.username}} </p>
+    <p><i>{{formatDate(comment.created)}}</i></p>
   </div>
 </div>
 </template>
@@ -71,14 +71,24 @@ export default {
       //loadComments();
       try{
         console.log("About to call api in submit comment");
+        let un = "";
+        if(this.$store.state.user == null)
+        {
+          un = "Anonymous";
+        }
+        else
+        {
+          un = this.$store.state.user.username;
+        }
         let response = await axios.post(
           "/api/photos/comment/" + this.$store.state.singlePhotoID, {
             text: this.newComment,
-            username: this.$store.state.user.username,
+            username: un,
           });
           this.comments = response.data.comments;
       } catch (error)
       {
+        console.log("ERROR:")
         console.log(error);
       }
     }

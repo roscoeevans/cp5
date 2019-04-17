@@ -1,13 +1,8 @@
 <template>
 <div>
-  <div class="image" v-for="photo in photos" v-bind:key="photo._id">
-    <img :src="photo.path" @click="showPhoto(photo._id)" />
-    <p class="photoTitle">{{photo.title}}</p>
-    <p class="photoDate">
-      <span v-if="photo.user.name">{{photo.user.name}}, </span>
-      {{formatDate(photo.created)}}
-    </p>
-    <p>{{photo.description}}</p>
+  <div class="image" v-for="photo in photos" v-bind:key="photo._id" @click="showPhoto(photo._id)">
+    <h1 class="photoTitle" @click="showPhoto(photo._id)">{{photo.title}}</h1>
+    <p @click="showPhoto(photo._id)">{{photo.description}}</p>
   </div>
 </div>
 </template>
@@ -53,10 +48,15 @@ p {
   margin: 0px;
 }
 
+h1{
+  font-size: medium;
+}
 .image {
   margin: 0 0 1.5em;
   display: inline-block;
   width: 100%;
+  padding: 10px;
+  border: 1px solid white;
 }
 
 .image img {
