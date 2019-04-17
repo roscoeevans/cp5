@@ -7,11 +7,12 @@
   <p> -{{photo.user.name}} </p>
   <p><i> {{photo.description}} </i> </p>
   <p> ({{formatDate(photo.created)}})</p> <br><br>
-  <h1>Comments: </h1>
-  <div v-if="user">
+  <h1>Comments:</h1>
+  <p>Your comments will be anonymous if you are not logged in </p>
+  <div class = "inputComments">
     <input type="commentToSubmit" v-model="newComment">
-    <button type="button" @click="submitComment(photo.user.name,newComment)" class="pure-button">Comment</button>
   </div>
+  <button type="button" @click="submitComment(photo.user.name,newComment)" class="pure-button">Comment</button>
   <div class = "comments" v-for="comment in comments">
     <p>{{comment.text}}</p>
     <p>{{comment.username}} </p>
@@ -88,5 +89,58 @@ export default {
 </script>
 
 <style scoped>
+.photoTitle {
+  margin: 0px;
+  font-size: 1.2em;
+}
+.inputComments{
+color: black;
 
+}
+
+.comments{
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+
+}
+.photoDate {
+  margin: 0px;
+  font-size: 0.9em;
+  font-weight: normal;
+}
+
+p {
+  margin: 0px;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+input {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button {
+  margin: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image {
+  margin: 0 0 1.5em;
+  display: inline-block;
+  width: 100%;
+}
+
+.image img {
+  max-width: 600px;
+  max-height: 600px;
+  image-orientation: from-image;
+}
 </style>

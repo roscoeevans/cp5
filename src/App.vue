@@ -19,7 +19,6 @@
 
 
 <style>
-
 /* https://color.adobe.com/Ventana-Azul-color-theme-2159606/?showPublished=true */
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

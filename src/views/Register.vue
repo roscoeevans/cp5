@@ -4,20 +4,21 @@
   <form @submit.prevent="register" class="pure-form pure-form-aligned">
     <fieldset>
       <p class="pure-form-message-inline">All fields are required.</p>
+      <div class="blackText">
+        <div class="pure-control-group">
+          <label for="name">Real Name</label>
+          <input v-model="name" type="text" placeholder="Real Name">
+        </div>
 
-      <div class="pure-control-group">
-        <label for="name">Real Name</label>
-        <input v-model="name" type="text" placeholder="Real Name">
-      </div>
+        <div class="pure-control-group">
+          <label for="username">Username</label>
+          <input v-model="username" type="text" placeholder="Username">
+        </div>
 
-      <div class="pure-control-group">
-        <label for="username">Username</label>
-        <input v-model="username" type="text" placeholder="Username">
-      </div>
-
-      <div class="pure-control-group">
-        <label for="password">Password</label>
-        <input v-model="password" type="password" placeholder="Password">
+        <div class="pure-control-group">
+          <label for="password">Password</label>
+          <input v-model="password" type="password" placeholder="Password">
+        </div>
       </div>
 
       <div class="pure-controls">
@@ -64,6 +65,10 @@ form {
   background-color: #eee;
   border-radius: 4px;
   padding: 20px;
+}
+
+.blackText {
+  color: black;
 }
 
 .pure-controls {
