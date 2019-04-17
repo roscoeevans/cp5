@@ -9,14 +9,15 @@
         <div class="modal-body">
           <p v-if="error" class="error">{{error}}</p>
           <form @submit.prevent="upload">
-            <input v-model="title" placeholder="Title">
-            <p></p>
-            <textarea v-model="description" placeholder="Description"></textarea>
-            <p></p>
-            <input type="file" name="photo" @change="fileChanged">
-            <p></p>
-            <button type="button" @click="close" class="pure-button">Close</button>
-            <button type="submit" class="pure-button pure-button-secondary">Upload</button>
+            <div class = "blackText">
+              <input v-model="title" placeholder="Title">
+              <p></p>
+              <textarea v-model="description" placeholder="Description"></textarea>
+              <p></p>
+              <p></p>
+              <button type="button" @click="close" class="pure-button">Close</button>
+              <button type="submit" class="pure-button pure-button-secondary">Upload</button>
+            </div>
           </form>
         </div>
       </div>
@@ -35,13 +36,12 @@ export default {
     return {
       title: '',
       description: '',
-      file: null,
       error: '',
     }
   },
   methods: {
     fileChanged(event) {
-      this.file = event.target.files[0]
+      //this.file = event.target.files[0]
     },
     close() {
       this.$emit('escape');
@@ -49,14 +49,14 @@ export default {
     async upload() {
       try {
         const formData = new FormData();
-        formData.append('photo', this.file, this.file.name);
+        //formData.append('photo', this.file, this.file.name);
         formData.append('title', this.title);
         formData.append('description', this.description);
         this.error = await this.$store.dispatch("upload", formData);
         if (!this.error) {
           this.title = '';
           this.description = '';
-          this.file = null;
+          //this.file = null;
           this.$emit('uploadFinished');
         }
       } catch (error) {
@@ -71,7 +71,9 @@ export default {
 input {
   width: 100%;
 }
-
+.blackText{
+  color: black;
+}
 textarea {
   width: 100%;
   height: 100px
