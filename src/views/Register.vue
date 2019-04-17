@@ -67,7 +67,7 @@ form {
   padding: 20px;
 }
 
-.blackText {
+.black {
   color: black;
 }
 

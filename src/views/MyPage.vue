@@ -3,21 +3,23 @@
   <div v-if="user">
     <div class="header">
       <div>
-        <h1>{{user.name}}</h1>
-      </div>
-      <div>
+        <h1>Your Account:</h1>
+        <p>Username: {{user.username}} </p>
+      </div> <br>
+      <div class = "logoutAndUpload">
         <p>
-          <a @click="toggleUpload"><i class="far fa-image"></i></a>
-          <a href="#" @click="logout"><i class="fas fa-sign-out-alt"></i></a>
+          <button @click="toggleUpload" class = "uploadButton">Register a Restaurant</button><br><br>
+          <button @click="logout" class = "logoutButton">Logout of Your Account</button>
         </p>
       </div>
     </div>
     <escape-event @escape="escape"></escape-event>
     <uploader :show="show" @escape="escape" @uploadFinished="uploadFinished" />
+    <h1> Your Registered Restaurants: <br> </h1>
     <image-gallery :photos="photos" />
   </div>
   <div v-else>
-    <p>If you would like to upload photos, please register for an account or login.</p>
+    <p>If you would like to register a restaurant to be reviewed, please register for an account or login.</p>
     <router-link to="/register" class="pure-button">Register</router-link> or
     <router-link to="/login" class="pure-button">Login</router-link>
   </div>
@@ -86,7 +88,17 @@ export default {
 
 <style scoped>
 .header {
-  display: flex;
+
+}
+.logoutAndUpload{
+  padding: 10px;
+  border: 10px;
+}
+.uploadButton{
+  background-color: grey;
+}
+.logoutButton{
+  background-color: grey;
 }
 
 .header a {
