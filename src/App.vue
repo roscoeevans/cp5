@@ -12,6 +12,13 @@
       <li class="pure-menu-item">
         <router-link to="/mypage" class="pure-menu-link">My Page</router-link>
       </li>
+      <li class="pure-menu-item">
+        <router-link to="/other" class="pure-menu-link">Other</router-link>
+      </li>
+      <li class="pure-menu-item">
+        <a href="https://github.com/samuelpugh4/creative5260">GitHub Repo</a>
+      </li>
+
     </ul>
   </div>
 </div>
@@ -41,6 +48,7 @@
   background: grey;
   align-self: baseline;
   padding-left: 5px;
+  padding-right: 10px;
 }
 
 .pure-menu-heading {
