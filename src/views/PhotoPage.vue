@@ -1,12 +1,11 @@
 <template>
 <div>
-  <div v-if="photo">
-    <img :src="photo.path" />
+  <div class = "restaurantName">
+   <h1>{{photo.title}}</h1>
   </div>
-  <p> "{{photo.title}}" </p>
-  <p> -{{photo.user.name}} </p>
-  <p><i> {{photo.description}} </i> </p>
-  <p> ({{formatDate(photo.created)}})</p> <br><br>
+  <p> -Owner: {{photo.user.name}} </p>
+  <p><i>Description:<br> {{photo.description}} </i> </p>
+  <br><br>
   <h1>Comments:</h1>
   <p>Your comments will be anonymous if you are not logged in </p>
   <div class = "inputComments">
@@ -118,6 +117,10 @@ color: black;
   margin: 0px;
   font-size: 0.9em;
   font-weight: normal;
+}
+
+.restaurantName{
+  font-size: large !important;
 }
 
 p {
