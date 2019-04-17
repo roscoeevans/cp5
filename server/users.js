@@ -82,7 +82,7 @@ const User = mongoose.model('User', userSchema);
 
 // create a new user
 router.post('/', async (req, res) => {
-  if (!req.body.username || !req.body.password || !req.body.name)
+  if (!req.body.username || !req.body.password)
     return res.status(400).send({
       message: "Name, username, and password are required."
     });
@@ -102,7 +102,6 @@ router.post('/', async (req, res) => {
     const user = new User({
       username: req.body.username,
       password: req.body.password,
-      name: req.body.name
     });
     await user.save();
     login(user, res);

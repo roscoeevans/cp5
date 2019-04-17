@@ -5,10 +5,6 @@
     <fieldset>
       <p class="pure-form-message-inline">All fields are required.</p>
       <div class="blackText">
-        <div class="pure-control-group">
-          <label for="name">Real Name</label>
-          <input v-model="name" type="text" placeholder="Real Name">
-        </div>
 
         <div class="pure-control-group">
           <label for="username">Username</label>
@@ -35,7 +31,6 @@ export default {
   name: 'register',
   data() {
     return {
-      name: '',
       username: '',
       password: '',
       error: '',
@@ -45,7 +40,6 @@ export default {
     async register() {
       try {
         this.error = await this.$store.dispatch("register", {
-          name: this.name,
           username: this.username,
           password: this.password
         });
@@ -67,7 +61,7 @@ form {
   padding: 20px;
 }
 
-.black {
+.blackText {
   color: black;
 }
 
