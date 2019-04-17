@@ -3,7 +3,7 @@
   <div class = "restaurantName">
    <h1>{{photo.title}}</h1>
   </div>
-  <p> -Owner: {{photo.user.name}} </p>
+  <p> -Owner: {{photo.user.username}} </p>
   <p><i>Description:<br> {{photo.description}} </i> </p>
   <br><br>
   <h1>Comments:</h1>

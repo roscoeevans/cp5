@@ -4,16 +4,18 @@
     <router-view />
   </div>
   <div class="pure-menu pure-menu-horizontal">
-    <span class="pure-menu-heading">Restaurant Reviewer</span>
+    <div class = "centerMenuHeading">
+    <span class="pure-menu-heading">Restaurant Reviewer</span> <br>
+  </div>
     <ul class="pure-menu-list">
       <li class="pure-menu-item">
-        <router-link to="/" class="pure-menu-link">Home</router-link>
+        <router-link to="/" class="pure-menu-link">Restaurants</router-link>
       </li>
       <li class="pure-menu-item">
-        <router-link to="/mypage" class="pure-menu-link">My Page</router-link>
+        <router-link to="/mypage" class="pure-menu-link">Account</router-link>
       </li>
       <li class="pure-menu-item">
-        <router-link to="/other" class="pure-menu-link">Other</router-link>
+        <router-link to="/other" class="pure-menu-link">About</router-link>
       </li>
       <li class="pure-menu-item">
         <a href="https://github.com/samuelpugh4/creative5260">GitHub Repo</a>
@@ -49,6 +51,11 @@
   align-self: baseline;
   padding-left: 5px;
   padding-right: 10px;
+}
+.centerMenuHeading
+{
+  align-items: center;
+  align-self: center;
 }
 
 .pure-menu-heading {
