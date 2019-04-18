@@ -15,7 +15,6 @@
 
 <style>
 #about {
-  background-image: linear-gradient(grey, black);
   padding: 20px;
 }
 </style>

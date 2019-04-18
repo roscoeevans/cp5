@@ -1,12 +1,9 @@
 <template>
 <div id="app">
-  <div class="content">
-    <router-view />
-  </div>
   <div class="pure-menu pure-menu-horizontal">
     <div class = "centerMenuHeading">
-    <span class="pure-menu-heading">Restaurant Reviewer</span> <br>
-  </div>
+      <span class="pure-menu-heading">Restaurant Reviewer</span> <br>
+    </div>
     <ul class="pure-menu-list">
       <li class="pure-menu-item">
         <router-link to="/" class="pure-menu-link">Restaurants</router-link>
@@ -23,9 +20,9 @@
       <li class="pure-menu-item">
         <a href="https://github.com/samuelpugh4/creative5260">GitHub Repo</a>
       </li>
-
     </ul>
   </div>
+  <router-view />
 </div>
 </template>
 
@@ -38,11 +35,9 @@
   -moz-osx-font-smoothing: grayscale;
   color: white;
   font-size: 18px;
-  display: flex;
   min-height: 100%;
   background-image: linear-gradient(#403a3e, #be5869);
   width: 100%;
-  display: inline-flex;
 }
 
 .pure-menu {
@@ -51,7 +46,8 @@
   /* Or set the width explicitly: */
   text-align: right;
   background: grey;
-  align-self: baseline;
+  width: 100%;
+  height: 150px;
   padding-left: 5px;
   padding-right: 10px;
 }
