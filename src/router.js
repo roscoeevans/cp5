@@ -6,6 +6,7 @@ import MyPage from './views/MyPage.vue'
 import Other from './views/Other.vue'
 import Login from './views/Login.vue'
 import PhotoPage from './views/PhotoPage.vue'
+import Contact from './views/Contact.vue'
 
 
 Vue.use(Router)
@@ -43,6 +44,11 @@ export default new Router({
       path: '/other',
       name: 'other',
       component: Other
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: Contact
     }
   ]
 })

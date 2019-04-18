@@ -6,12 +6,12 @@
   <p> -Owner: {{photo.user.username}} </p>
   <p><i>Description:<br> {{photo.description}} </i> </p>
   <br><br>
-  <h1>Comments:</h1>
-  <p>Your comments will be anonymous if you are not logged in </p>
+  <h1>Reviews:</h1>
+  <p>Your review will be anonymous if you are not logged in </p><br>
   <div class = "inputComments">
     <input type="commentToSubmit" v-model="newComment">
   </div>
-  <button type="button" @click="submitComment(photo.user.name,newComment)" class="pure-button">Comment</button>
+  <button type="button" @click="submitComment(photo.user.name,newComment)" class="pure-button">Post</button>
   <div class = "comments" v-for="comment in comments">
     <p>{{comment.text}}</p>
     <p>-{{comment.username}} </p>

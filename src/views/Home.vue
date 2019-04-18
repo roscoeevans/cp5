@@ -1,8 +1,9 @@
 <template>
 <div class="home">
+  <h1>Click on a restaurant to leave a review!</h1>
   <image-gallery :photos="photos" />
   <br><br>
-  <a href="https://github.com/BYU-CS-260-Winter-2019/lab-5-samuelpugh4">GitHub Repo</a>
+  <a href="https://github.com/samuelpugh4/creative5260">GitHub Repo</a>
 </div>
 
 

@@ -24,7 +24,7 @@
     <router-link to="/login" class="pure-button">Login</router-link>
   </div>
   <br><br>
-  <a href="https://github.com/BYU-CS-260-Winter-2019/lab-5-samuelpugh4">GitHub Repo</a>
+  <a href="https://github.com/samuelpugh4/creative5260">GitHub Repo</a>
 </div>
 
 </template>

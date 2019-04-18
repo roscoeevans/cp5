@@ -18,6 +18,9 @@
         <router-link to="/other" class="pure-menu-link">About</router-link>
       </li>
       <li class="pure-menu-item">
+        <router-link to="/contact" class="pure-menu-link">Contact Us</router-link>
+      </li>
+      <li class="pure-menu-item">
         <a href="https://github.com/samuelpugh4/creative5260">GitHub Repo</a>
       </li>
 
